@@ -268,7 +268,7 @@
     </section>
 
     <!-- Confirmação de presença -->
-        <section id="confirmar" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <section id="confirmar" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl overflow-hidden">
             <div class="md:flex">
                 <div class="md:w-1/2 bg-wedlight-secondary p-12 text-white flex flex-col justify-center">
@@ -283,14 +283,10 @@
                 </div>
                 
                 <div class="md:w-1/2 p-8">
-                    <form id="rsvp-form" class="space-y-6" method="post" action="https://formsubmit.co/arr2@aluno.ifal.edu.br">
-
-                    <input type="hidden" name="_subject" value="Nova confirmação de presença">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
+                    <form id="rsvp-form" class="space-y-6">
                         <div>
                             <label for="convidado" class="block text-sm font-medium text-wedding-dark mb-1">Selecione seu nome da lista</label>
-                            <select id="convidado" name="convidado" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" required>
+                            <select id="convidado" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" required>
                                 <option value="">-- Selecione --</option>
                                 <option value="Ana Silva">Ana Silva</option>
                                 <option value="Carlos Mendes">Carlos Mendes</option>
@@ -302,7 +298,7 @@
                         
                         <div>
                             <label for="whatsapp" class="block text-sm font-medium text-wedding-dark mb-1">Número do WhatsApp (com DDD)</label>
-                            <input type="tel" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" placeholder="Ex: 11987654321" required>
+                            <input type="tel" id="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" placeholder="Ex: 11987654321" required>
                         </div>
                         
                         <div>
@@ -332,7 +328,7 @@
                         
                         <div>
                             <label for="mensagem" class="block text-sm font-medium text-wedding-dark mb-1">Mensagem (opcional)</label>
-                            <textarea id="mensagem" name="mensagem" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent"></textarea>
+                            <textarea id="mensagem" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent"></textarea>
                         </div>
                         
                         <div>
@@ -345,6 +341,7 @@
             </div>
         </div>
     </section>
+
     <!-- Rodapé -->
     <footer class="bg-wedding-dark text-white py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -423,29 +420,5 @@
             });
         });
     </script>
-    <script>
-  const form = document.getElementById("rsvp-form");
-  const selectConvidado = document.getElementById("convidado");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Impede o redirecionamento
-
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json"
-      }
-    }).then(() => {
-      const nome = selectConvidado.value || "convidado";
-      form.innerHTML = `<div class="text-center"><h3 class="text-2xl font-bold text-wedding-accent mb-4">Obrigado, ${nome}!</h3><p class="text-gray-700">Sua presença foi confirmada com sucesso 💌</p></div>`;
-    }).catch(() => {
-      alert("Houve um erro ao enviar o formulário. Tente novamente mais tarde.");
-    });
-  });
-</script>
-
 </body>
 </html>
