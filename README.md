@@ -308,11 +308,11 @@
     <label class="...">Você comparecerá?</label>
     <div class="flex space-x-4">
       <div class="flex items-center">
-        <input id="presente-sim" name="Presença" type="radio" value="Sim" checked>
+        <input id="presente-sim" name="Presenca" type="radio" value="Sim" checked>
         <label for="presente-sim" class="...">Com certeza!</label>
       </div>
       <div class="flex items-center">
-        <input id="presente-nao" name="Presença" type="radio" value="Não">
+        <input id="presente-nao" name="Presenca" type="radio" value="Não">
         <label for="presente-nao" class="...">Infelizmente não</label>
       </div>
     </div>
