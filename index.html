@@ -1,1 +1,425 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Casamento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wedding: {
+                            primary: '#f8e1e7',
+                            secondary: '#d4a5b5',
+                            accent: '#9c6d7e',
+                            dark: '#4a2a36',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .floral-divider {
+            position: relative;
+            height: 30px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0,5 C15,0 15,10 30,5 C45,0 45,10 60,5 C75,0 75,10 90,5 L100,5 L100,10 L0,10 Z" fill="%23d4a5b5"/></svg>');
+            background-size: 100% 100%;
+            margin: 40px 0;
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        
+        .hero-pattern {
+            background-image: radial-gradient(circle, #f8e1e7 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-wedding-primary font-body text-wedding-dark">
+    <!-- Barra de navegação -->
+    <nav class="bg-white bg-opacity-80 fixed w-full z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-heading text-xl text-wedding-accent">Maria & João</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-wedding-dark hover:text-wedding-accent transition">Início</a>
+                    <a href="#sobre" class="text-wedding-dark hover:text-wedding-accent transition">Nossa História</a>
+                    <a href="#eventos" class="text-wedding-dark hover:text-wedding-accent transition">Eventos</a>
+                    <a href="#galeria" class="text-wedding-dark hover:text-wedding-accent transition">Galeria</a>
+                    <a href="#confirmar" class="px-4 py-2 bg-wedding-secondary text-white rounded-full hover:bg-wedding-accent transition">Confirmar Presença</a>
+                </div>
+                <button class="md:hidden text-wedding-dark">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section id="inicio" class="h-screen flex items-center justify-center hero-pattern relative overflow-hidden pt-16">
+        <div class="absolute inset-0 bg-wedding-primary opacity-50"></div>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8154d50a-cf35-47a4-9769-134231352c22.png" alt="Noivos em um jardim de casamento ao pôr do sol com flores e luzes de fundo" class="absolute w-full h-full object-cover" />
+        <div class="relative z-10 text-center pxd-4">
+            <h1 class="text-4xl md:text-6xl font-heading text-wedding-dark mb-4">Maria & João</h1>
+            <div class="floral-divider"></div>
+            <p class="text-xl md:text-2xl text-wedding-dark font-light">16 de Junho de 2024</p>
+            <div id="countdown" class="mt-10 flex justify-center gap-4">
+                <div class="bg-white bg-opacity-80 rounded-lg p-4 min-w-20">
+                    <div class="countdown-number font-heading text-wedding-accent text-2xl">00</div>
+                    <div class="countdown-label text-sm">DIAS</div>
+                </div>
+                <div class="bg-white bg-opacity-80 rounded-lg p-4 min-w-20">
+                    <div class="countdown-number font-heading text-wedding-accent text-2xl">00</div>
+                    <div class="countdown-label text-sm">HORAS</div>
+                </div>
+                <div class="bg-white bg-opacity-80 rounded-lg p-4 min-w-20">
+                    <div class="countdown-number font-heading text-wedding-accent text-2xl">00</div>
+                    <div class="countdown-label text-sm">MIN</div>
+                </div>
+                <div class="bg-white bg-opacity-80 rounded-lg p-4 min-w-20">
+                    <div class="countdown-number font-heading text-wedding-accent text-2xl">00</div>
+                    <div class="countdown-label text-sm">SEG</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossa História -->
+    <section id="sobre" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-heading text-wedding-accent mb-6">Nossa História</h2>
+            <div class="floral-divider"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1c09ab18-d968-4dcd-8f69-55e3238a1bf8.png" alt="Casal se abraçando em um parque com folhagem de outono ao fundo" class="rounded-lg shadow-xl" />
+                <div class="absolute -bottom-6 -left-6 bg-wedding-secondary text-white p-4 rounded-lg shadow-lg">
+                    <h3 class="font-heading text-xl">2018</h3>
+                    <p class="text-sm">Nosso primeiro encontro</p>
+                </div>
+            </div>
+            
+            <div>
+                <p class="mb-6 text-lg">Nos conhecemos em uma cafeteria no centro da cidade. João havia pedido o último pedaço de torta de maçã que eu queria, e assim começou nossa história de amor.</p>
+                
+                <div class="mb-8 relative pl-8">
+                    <div class="absolute left-0 top-2 w-6 h-6 bg-wedding-secondary rounded-full flex items-center justify-center text-white">1</div>
+                    <h3 class="font-heading text-xl mb-2">O Encontro</h3>
+                    <p>Foi amor à primeira vista (ou pelo menos à primeira mordida na torta que deveria ter sido minha). Marcamos nosso primeiro encontro oficial uma semana depois.</p>
+                </div>
+                
+                <div class="mb-8 relative pl-8">
+                    <div class="absolute left-0 top-2 w-6 h-6 bg-wedding-secondary rounded-full flex items-center justify-center text-white">2</div>
+                    <h3 class="font-heading text-xl mb-2">O Pedido</h3>
+                    <p>Na mesma cafeteria onde nos conhecemos, dois anos depois, João se ajoelhou com um anel e aquela torta de maçã que começou tudo.</p>
+                </div>
+                
+                <div class="mb-8 relative pl-8">
+                    <div class="absolute left-0 top-2 w-6 h-6 bg-wedding-secondary rounded-full flex items-center justify-center text-white">3</div>
+                    <h3 class="font-heading text-xl mb-2">Agora</h3>
+                    <p>Estamos ansiosos para celebrar nosso amor com todos vocês no nosso dia especial!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalhes do Casamento -->
+    <section id="eventos" class="py-20 bg-wedding-secondary bg-opacity-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-heading text-wedding-accent mb-6">Detalhes do Casamento</h2>
+                <div class="floral-divider"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Cerimônia -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 mx-auto text-wedding-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2 2m0 0l2 2m-2-2l-2 2m2 2l2-2m-5 9a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl text-wedding-dark mb-4">Cerimônia</h3>
+                    <p class="mb-4">Igreja Matriz de Nossa Senhora da Conceição</p>
+                    <p class="mb-4">16 de Junho de 2024 às 16h</p>
+                    <p class="text-sm">Rua do Amor, 123 - Centro<br />Cidade Feliz - SP</p>
+                    <button class="mt-6 px-6 py-2 bg-wedding-secondary text-white rounded-full hover:bg-wedding-accent transition">Ver no mapa</button>
+                </div>
+                
+                <!-- Recepção -->
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="mb-6">
+                        <svg class="w-12 h-12 mx-auto text-wedding-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl text-wedding-dark mb-4">Recepção</h3>
+                    <p class="mb-4">Salão de Festas Jardim dos Noivos</p>
+                    <p class="mb-4">16 de Junho de 2024 às 18h</p>
+                    <p class="text-sm">Alameda das Flores, 456 - Jardim<br />Cidade Feliz - SP</p>
+                    <button class="mt-6 px-6 py-2 bg-wedding-secondary text-white rounded-full hover:bg-wedding-accent transition">Ver no mapa</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-heading text-wedding-accent mb-6">Galeria de Fotos</h2>
+            <div class="floral-divider"></div>
+            <p class="max-w-2xl mx-auto">Alguns momentos especiais que vivemos juntos</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2b36d66e-6570-49b5-a951-b2158d4f6c26.png" alt="Casais sorrindo durante piquenique em um parque ensolarado" class="w-full h-full object-cover transition duration-300 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-heading text-xl translate-y-4 group-hover:translate-y-0 transition duration-300">Nosso primeiro aniversário</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/39ad7699-ddd7-4dd5-8b85-5805e7b981b5.png" alt="Pedido de casamento em uma praia ao entardecer com joelho no chão" class="w-full h-full object-cover transition duration-300 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-heading text-xl translate-y-4 group-hover:translate-y-0 transition duration-300">O pedido</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/76c4c6e0-bf69-457f-abc5-731def5d1214.png" alt="Casais caminhando de mãos dadas em floresta com luzes solares filtrando" class="w-full h-full object-cover transition duration-300 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-heading text-xl translate-y-4 group-hover:translate-y-0 transition duration-300">Passeio nas montanhas</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8a5a7d48-3add-4d53-99c5-4b4b38fe552b.png" alt="Casais dançando em festa com luzes coloridas e sorrisos largos" class="w-full h-full object-cover transition duration-300 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-heading text-xl translate-y-4 group-hover:translate-y-0 transition duration-300">Festa de aniversário</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/118b518b-2b21-4159-8959-c5df25398b53.png" alt="Viagem à praia com chapéus de palha e drink tropical" class="w-full h-full object-cover transition duration-300 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-heading text-xl translate-y-4 group-hover:translate-y-0 transition duration-300">Primeira viagem juntos</h3>
+                </div>
+            </div>
+            
+            <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d7d82092-7ec3-4271-85d3-cd9abfb2db62.png" alt="Foto dos noivos na entrada da igreja onde será o casamento" class="w-full h-full object-cover transition duration-300 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition duration-300 flex items-end p-6">
+                    <h3 class="text-white font-heading text-xl translate-y-4 group-hover:translate-y-0 transition duration-300">Escolhendo o local</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentes -->
+    <section class="py-20 bg-wedding-dark text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-heading text-wedding-primary mb-6">Lista de Presentes</h2>
+                <div class="floral-divider"></div>
+                <p class="max-w-2xl mx-auto">Sua presença é o presente mais importante. Mas se desejar nos presentear, aqui estão algumas sugestões:</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-wedlight-dark bg-opacity-50 p-6 rounded-lg border border-wedding-accent border-opacity-30 text-center">
+                    <h3 class="font-heading text-xl mb-4">Viagem de Lua de Mel</h3>
+                    <p class="mb-4 text-wedding-primary">Contribuição para nossa viagem dos sonhos</p>
+                    <button class="px-6 py-2 bg-wedding-accent text-white rounded-full hover:bg-wedding-secondary transition">Contribuir</button>
+                </div>
+                
+                <div class="bg-wedlight-dark bg-opacity-50 p-6 rounded-lg border border-wedding-accent border-opacity-30 text-center">
+                    <h3 class="font-heading text-xl mb-4">Mobília para nossa casa</h3>
+                    <p class="mb-4 text-wedding-primary">Liquidificador<br />Jogo de panelas<br />Conjunto de prataria</p>
+                    <button class="px-6 py-2 bg-wedding-accent text-white rounded-full hover:bg-wedding-secondary transition">Ver lista completa</button>
+                </div>
+                
+                <div class="bg-wedlight-dark bg-opacity-50 p-6 rounded-lg border border-wedding-accent border-opacity-30 text-center">
+                    <h3 class="font-heading text-xl mb-4">Vale-presente</h3>
+                    <p class="mb-4 text-wedding-primary">Loja preferida: Casas Bahia</p>
+                    <button class="px-6 py-2 bg-wedding-accent text-white rounded-full hover:bg-wedding-secondary transition">Informações</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmação de presença -->
+    <section id="confirmar" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+            <div class="md:flex">
+                <div class="md:w-1/2 bg-wedlight-secondary p-12 text-white flex flex-col justify-center">
+                    <h2 class="text-3xl font-heading mb-6">Você vem?</h2>
+                    <p class="mb-6">Por favor confirme sua presença até 15 de Maio de 2024</p>
+                    <div class="flex items-center">
+                        <svg class="w-8 h-8 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        <p>Confirme para cada convidado individualmente</p>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 p-8">
+                    <form id="rsvp-form" class="space-y-6">
+                        <div>
+                            <label for="convidado" class="block text-sm font-medium text-wedding-dark mb-1">Selecione seu nome da lista</label>
+                            <select id="convidado" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" required>
+                                <option value="">-- Selecione --</option>
+                                <option value="Ana Silva">Ana Silva</option>
+                                <option value="Carlos Mendes">Carlos Mendes</option>
+                                <option value="Julia Oliveira">Julia Oliveira</option>
+                                <option value="Marcos Souza">Marcos Souza</option>
+                                <!-- Add more names as needed -->
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="whatsapp" class="block text-sm font-medium text-wedding-dark mb-1">Número do WhatsApp (com DDD)</label>
+                            <input type="tel" id="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" placeholder="Ex: 11987654321" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-wedding-dark mb-2">Você comparecerá?</label>
+                            <div class="flex space-x-4">
+                                <div class="flex items-center">
+                                    <input id="presente-sim" name="presenca" type="radio" class="h-4 w-4 text-wedding-accent focus:ring-wedding-accent border-gray-300" value="sim" checked>
+                                    <label for="presente-sim" class="ml-2 block text-sm text-gray-700">Com certeza!</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="presente-nao" name="presenca" type="radio" class="h-4 w-4 text-wedding-accent focus:ring-wedding-accent border-gray-300" value="nao">
+                                    <label for="presente-nao" class="ml-2 block text-sm text-gray-700">Infelizmente não</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="guest-count" class="hidden">
+                            <label for="quantidade" class="block text-sm font-medium text-wedding-dark mb-1">Quantas pessoas?</label>
+                            <select id="quantidade" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5+</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="mensagem" class="block text-sm font-medium text-wedding-dark mb-1">Mensagem (opcional)</label>
+                            <textarea id="mensagem" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-wedding-accent hover:bg-wedding-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-wedding-accent transition">
+                                Confirmar Presença
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-wedding-dark text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="font-heading text-xl text-wedding-primary">Maria & João</h3>
+                    <p class="text-xs text-wedding-primary opacity-70">16 de Junho de 2024</p>
+                </div>
+                
+                <div class="mb-4 md:mb-0">
+                    <p class="text-center md:text-right text-sm text-wedding-primary opacity-70">Com amor, criado para compartilhar nosso dia especial</p>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-wedlight-accent bg-opacity-20 p-2 rounded-full hover:bg-opacity-40 transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="bg-wedlight-accent bg-opacity-20 p-2 rounded-full hover:bg-opacity-40 transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-wedlight-accent border-opacity-30 text-center text-sm text-wedding-primary opacity-70">
+                <p>© 2024 Maria & João. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown para a data do casamento
+        function updateCountdown() {
+            const weddingDate = new Date('2024-06-16T16:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.querySelectorAll('.countdown-number')[0].textContent = days.toString().padStart(2, '0');
+            document.querySelectorAll('.countdown-number')[1].textContent = hours.toString().padStart(2, '0');
+            document.querySelectorAll('.countdown-number')[2].textContent = minutes.toString().padStart(2, '0');
+            document.querySelectorAll('.countdown-number')[3].textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+        
+        // Formulário RSVP
+        document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const convidado = document.getElementById('convidado').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const presenca = document.querySelector('input[name="presenca"]:checked').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            // Aqui você normalmente enviaria os dados para um servidor
+            // Para este exemplo, vamos apenas mostrar uma mensagem
+            alert(`Obrigado, ${convidado}! Sua confirmação de presença foi registrada com sucesso.`);
+            
+            // Limpar o formulário
+            this.reset();
+        });
+        
+        // Mostrar/ocultar campo de quantidade quando confirmando presença
+        document.querySelectorAll('input[name="presenca"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.getElementById('guest-count').classList.toggle('hidden', this.value !== 'sim');
+            });
+        });
+    </script>
+</body>
+</html>
