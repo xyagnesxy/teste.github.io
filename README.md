@@ -268,7 +268,7 @@
     </section>
 
     <!-- Confirmação de presença -->
-    <section id="confirmar" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <section id="confirmar" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div class="bg-white rounded-lg shadow-xl overflow-hidden">
             <div class="md:flex">
                 <div class="md:w-1/2 bg-wedlight-secondary p-12 text-white flex flex-col justify-center">
@@ -283,67 +283,68 @@
                 </div>
                 
                 <div class="md:w-1/2 p-8">
-                    <form id="rsvp-form" class="space-y-6" action="https://formsubmit.co/arr2@aluno.ifal.edu.br" method="POST">
-  <!-- Campos ocultos do FormSubmit -->
+                    <form id="rsvp-form" class="space-y-6" method="post" action="https://formsubmit.co/arr2@aluno.ifal.edu.br">
+
+                    <input type="hidden" name="_subject" value="Nova confirmação de presença">
   <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="Nova confirmação de presença!">
-
-  <div>
-    <label for="convidado" class="block text-sm font-medium text-wedding-dark mb-1">Selecione seu nome da lista</label>
-    <select id="convidado" name="Convidado" class="..." required>
-      <option value="">-- Selecione --</option>
-      <option value="Ana Silva">Ana Silva</option>
-      <option value="Carlos Mendes">Carlos Mendes</option>
-      <option value="Julia Oliveira">Julia Oliveira</option>
-      <option value="Marcos Souza">Marcos Souza</option>
-    </select>
-  </div>
-
-  <div>
-    <label for="whatsapp" class="...">Número do WhatsApp (com DDD)</label>
-    <input type="tel" id="whatsapp" name="WhatsApp" class="..." required>
-  </div>
-
-  <div>
-    <label class="...">Você comparecerá?</label>
-    <div class="flex space-x-4">
-      <div class="flex items-center">
-        <input id="presente-sim" name="Presenca" type="radio" value="Sim" checked>
-        <label for="presente-sim" class="...">Com certeza!</label>
-      </div>
-      <div class="flex items-center">
-        <input id="presente-nao" name="Presenca" type="radio" value="Não">
-        <label for="presente-nao" class="...">Infelizmente não</label>
-      </div>
-    </div>
-  </div>
-
-  <div id="guest-count" class="hidden">
-    <label for="quantidade" class="...">Quantas pessoas?</label>
-    <select id="quantidade" name="Quantidade" class="...">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5+</option>
-    </select>
-  </div>
-
-  <div>
-    <label for="mensagem" class="...">Mensagem (opcional)</label>
-    <textarea id="mensagem" name="Mensagem" rows="3" class="..."></textarea>
-  </div>
-
-  <div>
-    <button type="submit" class="...">Confirmar Presença</button>
-  </div>
-</form>
-
+  <input type="hidden" name="_template" value="table">
+                        <div>
+                            <label for="convidado" class="block text-sm font-medium text-wedding-dark mb-1">Selecione seu nome da lista</label>
+                            <select id="convidado" name="convidado" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" required>
+                                <option value="">-- Selecione --</option>
+                                <option value="Ana Silva">Ana Silva</option>
+                                <option value="Carlos Mendes">Carlos Mendes</option>
+                                <option value="Julia Oliveira">Julia Oliveira</option>
+                                <option value="Marcos Souza">Marcos Souza</option>
+                                <!-- Add more names as needed -->
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="whatsapp" class="block text-sm font-medium text-wedding-dark mb-1">Número do WhatsApp (com DDD)</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" placeholder="Ex: 11987654321" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-wedding-dark mb-2">Você comparecerá?</label>
+                            <div class="flex space-x-4">
+                                <div class="flex items-center">
+                                    <input id="presente-sim" name="presenca" type="radio" class="h-4 w-4 text-wedding-accent focus:ring-wedding-accent border-gray-300" value="sim" checked>
+                                    <label for="presente-sim" class="ml-2 block text-sm text-gray-700">Com certeza!</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input id="presente-nao" name="presenca" type="radio" class="h-4 w-4 text-wedding-accent focus:ring-wedding-accent border-gray-300" value="nao">
+                                    <label for="presente-nao" class="ml-2 block text-sm text-gray-700">Infelizmente não</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="guest-count" class="hidden">
+                            <label for="quantidade" class="block text-sm font-medium text-wedding-dark mb-1">Quantas pessoas?</label>
+                            <select id="quantidade" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5+</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="mensagem" class="block text-sm font-medium text-wedding-dark mb-1">Mensagem (opcional)</label>
+                            <textarea id="mensagem" name="mensagem" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-wedding-accent hover:bg-wedding-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-wedding-accent transition">
+                                Confirmar Presença
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Rodapé -->
     <footer class="bg-wedding-dark text-white py-8">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
