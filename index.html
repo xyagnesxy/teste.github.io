@@ -411,7 +411,9 @@
             alert(`Obrigado, ${convidado}! Sua confirmação de presença foi registrada com sucesso.`);
             
             // Limpar o formulário
-            this.reset();
+            setTimeout(() => {
+        this.reset();
+    }, 1000);
         });
         
         // Mostrar/ocultar campo de quantidade quando confirmando presença
