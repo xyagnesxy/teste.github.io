@@ -283,7 +283,7 @@
                 </div>
                 
                 <div class="md:w-1/2 p-8">
-                    <form id="rsvp-form" class="space-y-6" action="https://formsubmit.co/SEU_EMAIL_AQUI" method="POST">
+                    <form id="rsvp-form" class="space-y-6" action="https://formsubmit.co/arr2@aluno.ifal.edu.br" method="POST">
                         <div>
                             <label for="convidado" class="block text-sm font-medium text-wedding-dark mb-1">Selecione seu nome da lista</label>
                             <select id="convidado" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" required>
