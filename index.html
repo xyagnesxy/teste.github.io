@@ -284,10 +284,10 @@
                 </div>
                 
                 <div class="md:w-1/2 p-8">
-                    <form id="rsvp-form" class="space-y-6">
+                    <form id="rsvp-form" class="space-y-6" method="post" action="https://formsubmit.co/arr2@aluno.ifal.edu.br">
                         <div>
                             <label for="convidado" class="block text-sm font-medium text-wedding-dark mb-1">Selecione seu nome da lista</label>
-                            <select id="convidado" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" required>
+                            <select id="convidado" name="convidado" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" required>
                                 <option value="">-- Selecione --</option>
                                 <option value="Ana Silva">Ana Silva</option>
                                 <option value="Carlos Mendes">Carlos Mendes</option>
@@ -299,7 +299,7 @@
                         
                         <div>
                             <label for="whatsapp" class="block text-sm font-medium text-wedding-dark mb-1">Número do WhatsApp (com DDD)</label>
-                            <input type="tel" id="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" placeholder="Ex: 11987654321" required>
+                            <input type="tel" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" placeholder="Ex: 11987654321" required>
                         </div>
                         
                         <div>
@@ -329,7 +329,7 @@
                         
                         <div>
                             <label for="mensagem" class="block text-sm font-medium text-wedding-dark mb-1">Mensagem (opcional)</label>
-                            <textarea id="mensagem" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent"></textarea>
+                            <textarea id="mensagem" name="mensagem" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent"></textarea>
                         </div>
                         
                         <div>
