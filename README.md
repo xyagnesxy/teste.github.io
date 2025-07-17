@@ -286,7 +286,7 @@
                     <form id="rsvp-form" class="space-y-6" action="https://formsubmit.co/arr2@aluno.ifal.edu.br" method="POST">
                         <div>
                             <label for="convidado" class="block text-sm font-medium text-wedding-dark mb-1">Selecione seu nome da lista</label>
-                            <select id="convidado" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" required>
+                            <select id="convidado" name="convidado" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" required>
                                 <option value="">-- Selecione --</option>
                                 <option value="Ana Silva">Ana Silva</option>
                                 <option value="Carlos Mendes">Carlos Mendes</option>
@@ -298,7 +298,7 @@
                         
                         <div>
                             <label for="whatsapp" class="block text-sm font-medium text-wedding-dark mb-1">Número do WhatsApp (com DDD)</label>
-                            <input type="tel" id="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" placeholder="Ex: 11987654321" required>
+                            <input type="tel" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent" placeholder="Ex: 11987654321" required>
                         </div>
                         
                         <div>
@@ -328,7 +328,7 @@
                         
                         <div>
                             <label for="mensagem" class="block text-sm font-medium text-wedding-dark mb-1">Mensagem (opcional)</label>
-                            <textarea id="mensagem" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent"></textarea>
+                            <textarea id="mensagem" name="mensagem" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-wedding-accent focus:border-wedding-accent"></textarea>
                         </div>
                         
                         <div>
@@ -336,6 +336,13 @@
                                 Confirmar Presença
                             </button>
                         </div>
+                    <input type="hidden" name="_next" value="https://xyagnesxy.github.io">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_subject" value="Nova confirmação de presença">
+
+        
+                        
                     </form>
                 </div>
             </div>
